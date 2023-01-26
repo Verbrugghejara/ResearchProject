@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   viteproject:
-    image: finalresearch2
+    image: finalresearch1
     build:
       context: vite-project
       dockerfile: ./Dockerfile
