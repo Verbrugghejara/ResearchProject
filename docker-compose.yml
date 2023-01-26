@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  viteproject:
+    image: finalresearch2
+    build:
+      context: vite-project
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - "8080:8080"
+      
+  # api:
+  #   image: mongodb-go
+  #   build:
+  #     context: api
+  #     dockerfile: ./Dockerfile
+  #   environment:
+  #     NODE_ENV: production
+  #   ports:
+  #     - "3333:3333"
