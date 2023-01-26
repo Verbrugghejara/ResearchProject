@@ -13,9 +13,9 @@
     <div class="flex justify-center">
       <p
         class="absolute bottom-10 rounded-2xl bg-red-400 p-2 px-6 text-5xl shadow-lg"
-        v-if="scrollData > 0"
+        v-if="scrollData >= 0"
       >
-        {{ scrollData}}
+        {{ Math.round(scrollData)}}
       </p>
     </div>
     <div class="h-[1080px] border-b-2 bg-red-500 text-9xl font-bold">

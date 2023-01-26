@@ -49,8 +49,8 @@ func enableCors(w *http.ResponseWriter) {
 
 func main() {
 
-	// dotenv := goDotEnvVariable("mongoDB_password")
-	client, err := mongo.NewClient(options.Client().ApplyURI("mongodb+srv://jaraver:Jonasjara1@research.9wqbygj.mongodb.net/test"))
+	dbenv := goDotEnvVariable("mongoDB_database")
+	client, err := mongo.NewClient(options.Client().ApplyURI(dbenv))
 	if err != nil {
 		log.Fatal(err)
 	}
